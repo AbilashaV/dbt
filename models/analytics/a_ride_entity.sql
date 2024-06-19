@@ -1,5 +1,5 @@
---{{config(materialized='table')}}
 
+--{{config(materialized='table')}}
 select
     ride_id,
     assign_time_local,
@@ -78,6 +78,5 @@ select
     payment_item_uuid,
     mdd,
     rider_penalized_amount
-
 from {{ ref("c_ride_entity") }} r
 --where region= 'SG'

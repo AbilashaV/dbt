@@ -93,5 +93,5 @@ select
     mdd,
     rider_penalized_amount::NUMERIC(10, 2) as rider_penalized_amount
 -- from {{ ref("src_ride_entity") }} 
-from {{ ref("stg_ride_entity") }} r
-join {{ ref("regions") }} rg on r.region = rg.country
+from {{ ref("src_ride_entity") }} r
+join {{ ref("ref_regions") }} rg on r.region = rg.country
